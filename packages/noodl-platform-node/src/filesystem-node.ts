@@ -104,7 +104,7 @@ export class FileSystemNode implements IFileSystem {
     let jsonText = '';
 
     try {
-      jsonText = JSON.stringify(obj);
+      jsonText = JSON.stringify(obj, null, 1);
     } catch (error) {
       console.log('Error serializing json', error);
       throw error;
